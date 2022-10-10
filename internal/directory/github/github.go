@@ -146,8 +146,7 @@ func (p *Provider) UserGroups(ctx context.Context) ([]*directory.Group, []*direc
 
 		for _, team := range teams {
 			allGroups = append(allGroups, &directory.Group{
-				Id:   team.Slug,
-				Name: team.Slug,
+				Name: orgSlug + "/" +team.Slug,
 			})
 			for _, memberID := range team.MemberIDs {
 				userLoginToGroups[memberID] = append(userLoginToGroups[memberID], team.Slug)

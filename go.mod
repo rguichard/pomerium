@@ -1,4 +1,4 @@
-module github.com/pomerium/pomerium
+module github.com/rguichard/pomerium
 
 go 1.18
 
